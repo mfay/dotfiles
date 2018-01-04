@@ -12,23 +12,24 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'vim-scripts/tComment'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'duff/vim-scratch'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'mfay/vim-cf-snippets'
 
 call vundle#end()
 filetype plugin indent on
 
 syntax on
-set sw=4
-set sts=4
-set et
 set number
 set relativenumber
 set background=dark
 set smartindent
 set foldmethod=indent
-set foldlevelstart=1
+set foldlevelstart=100
 set noignorecase
 set smartcase
 set mouse=a
@@ -59,3 +60,7 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
