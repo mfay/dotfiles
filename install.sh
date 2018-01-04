@@ -10,7 +10,5 @@ source install/git.sh
 
 source install/vim.sh
 
-if ! comamnd_exists tmux; then
-	echo "Installing tmux."
-	apt install -y tmux
-fi
+source install/tmux.sh
+

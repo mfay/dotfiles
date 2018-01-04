@@ -1,3 +1,5 @@
+#if-shell "uname | grep -q Darwin" "source-file .tmux-macosx" "source-file .tmux-linux"
+
 set -g default-shell $SHELL
 set -g default-command "reattach-to-user-namespace -l ${SHELL}"
 
@@ -14,10 +16,11 @@ set -g pane-active-border-fg brightcyan
 set -g message-fg colour16
 set -g message-bg colour221
 
-set -g status-left '#[fg=colour235,bg=colour252] #S #[fg=colour252,bg=colour240] #(~/bin/tmux-cpu-info)#[fg=colour240,bg=colour236] #(~/bin/tmux-weather) #[fg=colour236,bg=colour234]'
-set -g window-status-format "#[fg=white,bg=colour234] #W "
+#set -g status-left '#[fg=colour235,bg=colour252] #S #[fg=colour252,bg=colour240] #(~/bin/tmux-cpu-info)#[fg=colour240,bg=colour236] #(~/bin/tmux-weather) #[fg=colour236,bg=colour234]'
+set -g status-left '#[fg=colour235,bg=colour252] #S #[fg=colour252,bg=colour240] #{battery_icon} #{battery_percentage} #[fg=colour240,bg=colour235]'
+set -g window-status-format "#[fg=white,bg=colour234] #I #W "
 set -g window-status-current-format "#[fg=colour234,bg=brightcyan]#[fg=black,bg=brightcyan,noreverse] #W #[fg=brightcyan,bg=colour234]"
-set -g status-right '#[fg=colour236,bg=colour234]#[fg=brightcyan,bg=colour236] #(~/bin/tmux-spotify-info)'
+set -g status-right '#[fg=colour236,bg=colour234]#[fg=brightcyan,bg=colour236] #(~/bin/spotify-vim) '
 
 set -g prefix C-a
 unbind C-b
@@ -50,3 +53,7 @@ bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 
 # Bring back clear screen under tmux prefix
 bind C-l send-keys 'C-l'
+
+set -g @plugin 'tmux-plugins/tmux-battery'
+
+run '~/.tmux/plugins/tpm/tpm'
