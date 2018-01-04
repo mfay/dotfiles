@@ -19,6 +19,7 @@ Plugin 'duff/vim-scratch'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'mfay/vim-cf-snippets'
+Plugin 'aserebryakov/vim-todo-lists'
 
 call vundle#end()
 filetype plugin indent on
