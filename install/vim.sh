@@ -6,7 +6,7 @@ mkdir -p ~/.vim/bundle
 
 echo "Install vundle."
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/.
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 if ! command_exists vim; then
 	echo "Installing vim."
