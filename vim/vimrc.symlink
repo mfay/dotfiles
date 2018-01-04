@@ -16,7 +16,6 @@ set sw=4
 set sts=4
 set et
 set number
-colo murphy
 set background=dark
 map <F10> :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
 
