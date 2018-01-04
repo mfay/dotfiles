@@ -8,5 +8,5 @@ for file in $linkables; do
 	else
 		echo "Creating symlink for $file"
 		ln -s $file $target
-	if
+	fi
 done
