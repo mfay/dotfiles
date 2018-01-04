@@ -7,7 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree.git'
-Plugin 'archSeer/colibri.vim'
+Plugin 'andbar-ru/vim-unicon'
 
 call vundle#end()
 filetype plugin indent on
@@ -18,7 +18,7 @@ set sts=4
 set et
 set number
 set background=light
-colo colibri
+colo unicon
 map <F10> :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
 
 map <C-n> :NERDTreeToggle<CR>
