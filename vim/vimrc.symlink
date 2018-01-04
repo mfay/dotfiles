@@ -24,9 +24,33 @@ set sw=4
 set sts=4
 set et
 set number
-set background=light
+set relativenumber
+set background=dark
+set smartindent
+set foldmethod=indent
+set noignorecase
+set smartcase
+set mouse=a
+set tabstop=4
+set sw=4
+set list
+set wrap
 set t_Co=256
 colo unicon
+
+"let mapleader = ","
+
+au BufReadPost *.cfm set syntax=html
+au BufReadPost *.cfc set syntax=html
+au FileType nerdtree setlocal nolist
+au FileType python setlocal sw=4 sts=4 et
+
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
+set listchars=tab:▸\ ,eol:⏎,extends:☢,nbsp:♞,trail:☭
+set laststatus=2
+
 map <F10> :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
 
 map <C-n> :NERDTreeToggle<CR>
