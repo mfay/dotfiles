@@ -16,6 +16,7 @@ set sw=4
 set sts=4
 set et
 set number
+colo murphy
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-h> <C-w>h
