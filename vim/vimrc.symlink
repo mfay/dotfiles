@@ -1,0 +1,24 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree.git'
+
+call vundle#end()
+filetype plugin indent on
+
+syntax on
+set sw=4
+set sts=4
+set et
+set number
+
+map <C-n> :NERDTreeToggle<CR>
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
