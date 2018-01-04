@@ -17,7 +17,7 @@ set sts=4
 set et
 set number
 colo murphy
-set backgrond=dark
+set background=dark
 map <F10> :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
 
 map <C-n> :NERDTreeToggle<CR>
