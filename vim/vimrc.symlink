@@ -25,6 +25,7 @@ set sts=4
 set et
 set number
 set background=light
+set t_Co=256
 colo unicon
 map <F10> :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
 
