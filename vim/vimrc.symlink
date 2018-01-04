@@ -28,6 +28,7 @@ set relativenumber
 set background=dark
 set smartindent
 set foldmethod=indent
+set foldlevelstart=1
 set noignorecase
 set smartcase
 set mouse=a
