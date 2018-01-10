@@ -22,9 +22,9 @@ set -g window-status-format "#[fg=white,bg=colour234] #I #W "
 set -g window-status-current-format "#[fg=colour234,bg=brightcyan]#[fg=black,bg=brightcyan,noreverse] #W #[fg=brightcyan,bg=colour234]"
 set -g status-right '#[fg=colour236,bg=colour234]#[fg=brightcyan,bg=colour236] #(~/bin/spotify-vim) '
 
-set -g prefix C-a
-unbind C-b
-bind C-a send-prefix
+# set -g prefix C-a
+# unbind C-b
+# bind C-a send-prefix
 
 set -g default-terminal "screen-256color"
 
