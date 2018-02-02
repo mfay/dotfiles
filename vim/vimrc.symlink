@@ -6,6 +6,8 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'andbar-ru/vim-unicon'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -20,6 +22,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'mfay/vim-cf-snippets'
 Plugin 'aserebryakov/vim-todo-lists'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
 filetype plugin indent on
@@ -27,7 +31,6 @@ filetype plugin indent on
 syntax on
 set number
 set relativenumber
-set background=dark
 set smartindent
 set foldmethod=indent
 set foldlevelstart=100
@@ -38,8 +41,10 @@ set tabstop=4
 set sw=4
 set list
 set wrap
+set background=dark
+let g:solarized_termcolors=256
 set t_Co=256
-colo unicon
+colo solarized
 
 "let mapleader = ","
 
@@ -55,8 +60,10 @@ set listchars=tab:▸\ ,eol:⏎,extends:☢,nbsp:♞,trail:☭
 set laststatus=2
 
 map <F10> :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
+":nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+autocmd BufWritePre * %s/\s\+$//e
 
-map <C-n> :NERDTreeToggle<CR>
+nmap <Space> :NERDTreeToggle<CR>
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
