@@ -43,6 +43,7 @@ set list
 set wrap
 set background=dark
 let g:solarized_termcolors=256
+let g:airline_powerline_fonts = 1
 set t_Co=256
 colo solarized
 
