@@ -53,6 +53,7 @@ au BufReadPost *.cfm set syntax=html
 au BufReadPost *.cfc set syntax=html
 au FileType nerdtree setlocal nolist
 au FileType python setlocal sw=4 sts=4 et
+au FileType yaml setlocal sw=2 ts=2 et
 
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
