@@ -11,6 +11,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'andbar-ru/vim-unicon'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-scripts/tComment'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
@@ -22,8 +23,6 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'mfay/vim-cf-snippets'
 Plugin 'aserebryakov/vim-todo-lists'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
 filetype plugin indent on
@@ -45,14 +44,14 @@ set background=dark
 let g:solarized_termcolors=256
 let g:airline_powerline_fonts = 1
 set t_Co=256
-colo solarized
+colo unicon
 
 "let mapleader = ","
 
 au BufReadPost *.cfm set syntax=html
 au BufReadPost *.cfc set syntax=html
 au FileType nerdtree setlocal nolist
-au FileType python setlocal sw=4 sts=4 et
+au FileType python setlocal sw=4 sts=4 et tw=79 fo+=t
 au FileType yaml setlocal sw=2 ts=2 et
 
 highlight NonText guifg=#4a4a59
@@ -73,5 +72,6 @@ map <C-l> <C-w>l
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsUsePythonVersion=2
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:VimTodoListsMoveItems = 0

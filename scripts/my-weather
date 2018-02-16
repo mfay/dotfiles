@@ -1,0 +1,4 @@
+#!/bin/bash
+
+curl http://services.faa.gov/airport/status/GRR -s -H "Accept: application/json" | \
+	python -c "import sys, json; print json.load(sys.stdin)['weather']['temp'].split('(')[0]"
