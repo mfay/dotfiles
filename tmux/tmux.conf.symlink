@@ -1,1 +1,2 @@
-if-shell "uname | grep -q Darwin" "source-file .tmux-mac.conf" "source-file .tmux-linux.conf"
+bind r source-file ~/.tmux.conf \; display-message "Config reloaded..."
+if-shell "uname | grep -q Darwin" "source-file ~/.tmux-mac.conf" "source-file ~/.tmux-linux.conf"
