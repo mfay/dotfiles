@@ -23,6 +23,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'mfay/vim-cf-snippets'
 Plugin 'aserebryakov/vim-todo-lists'
+Plugin 'pangloss/vim-javascript'
+Plugin 'lepture/vim-jinja'
 
 call vundle#end()
 filetype plugin indent on
@@ -75,3 +77,4 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsUsePythonVersion=2
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:VimTodoListsMoveItems = 0
+let NERDTreeIgnore = ['\.pyc$']
