@@ -21,7 +21,7 @@ set -g status-left '#[fg=colour235,bg=colour252] #S #[fg=colour252,bg=colour240]
 set -g window-status-format "#[fg=white,bg=colour234] #I #W "
 set -g window-status-current-format "#[fg=colour234,bg=brightcyan]#[fg=black,bg=brightcyan,noreverse] #W #[fg=brightcyan,bg=colour234]"
 set -g status-right-length 250
-set -g status-right '#[fg=colour236,bg=colour234]#[fg=brightcyan,bg=colour236]%l:%M %p %h %d ☀ #(~/bin/my-weather) #(~/bin/spotify-vim)'
+set -g status-right '#[fg=colour236,bg=colour234]#[fg=brightcyan,bg=colour236]%l:%M %p %h %d #(~/bin/my-weather) #(~/bin/spotify-vim) #(~/bin/myip) '
 
 # set -g prefix C-a
 # unbind C-b
@@ -57,7 +57,7 @@ bind % split-window -h -c "#{pane_current_path}"
 bind c new-window -c "#{pane_current_path}"
 
 # Bring back clear screen under tmux prefix
-bind C-l send-keys 'C-l'
+bind C-b send-keys 'C-l'
 
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-battery'

@@ -1,18 +1,32 @@
 #!/usr/bin/env osascript
 
+global lastVolume
+set lastVolume to missing value
 tell application "Spotify"
-  if it is running then
-    if player state is playing then
-      set track_name to name of current track
-      set artist_name to artist of current track
-
-      if artist_name > 0
-        # If the track has an artist set and is therefore most likely a song rather than an advert
-        "♫ " & artist_name & " - " & track_name
-      else
-        # If the track doesn't have an artist set and is therefore most likely an advert rather than a song
-        "~ " & track_name
-      end if
-    end if
-  end if
+	if it is running then
+		if player state is playing then
+			set track_name to name of current track
+			set artist_name to artist of current track
+			set volcheck to get sound volume
+			if artist_name > 0
+				if lastVolume is equal to missing value then
+					set lastVolume to 75
+				end if
+				if volcheck <= 10 then
+					set sound volume to lastVolume
+				else
+					set lastVolume to volcheck
+				end if
+				# If the track has an artist set and is therefore most likely a song rather than an advert
+				"🎧 " & artist_name & " - " & track_name
+			else
+				if volcheck is not 10 then
+					set lastVolume to volcheck
+					set sound volume to 10
+				end if
+				# If the track doesn't have an artist set and is therefore most likely an advert rather than a song
+				lastVolume & "🙉 " & track_name
+			end if
+		end if
+	end if
 end tell
